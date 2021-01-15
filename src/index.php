@@ -24,6 +24,7 @@ class Employer {
             //check if name is not already written into a text file
             // escapeshellarg — escape a string to be used as a shell argument
             if(!exec('grep ' . escapeshellarg($jobCandidate->getName()) . ' ' . $this->_text_file_destination)) {
+                //write data to a file
                 file_put_contents(
                     $this->_text_file_destination,
                     $jobCandidate->getName() . PHP_EOL,
