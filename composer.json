@@ -1,0 +1,32 @@
+{
+    "name": "employer/job-candidate",
+    "description": "Job candidate",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Employer\\JobCandidate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Employer\\JobCandidate\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.16",
+        "phpunit/phpunit": "^7"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
